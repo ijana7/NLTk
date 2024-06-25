@@ -22,25 +22,4 @@ The process of determining the base or dictionary form of a word (lemma) using v
 
 ## Benefits of Using NLTK
 1. Powerful text processing capabilities.
-2. Providing a wide range of useful linguistic resources.
-##code
-import nltk
-from nltk.tokenize import word_tokenize
-from nltk.stem import PorterStemmer
-from nltk.corpus import stopwords
-
-nltk.download('stopwords')
-nltk.download('punkt')
-
-stop_words = set(stopwords.words('english'))
-
-text = "Data science is an interdisciplinary field that uses scientific methods, processes, algorithms, and systems to extract knowledge and insights from data."
-
-tokens = word_tokenize(text)
-stemmer = PorterStemmer()
-stemmed_tokens = [stemmer.stem(token) for token in tokens]
-filtered_tokens = [token for token in stemmed_tokens if token.lower() not in stop_words]
-
-print("Original Text: ", text)
-print("Stemmed Tokens: ", stemmed_tokens)
-print("Filtered Tokens: ", filtered_tokens)
+2. Providing a wide range of useful linguistic
